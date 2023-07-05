@@ -1,0 +1,103 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.itens {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+img {
+  width: 100%;
+}
+
+.item {
+  margin-bottom: 30px;
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.6rem;
+  border: solid 1px;
+}
+
+.item:hover .qualquer {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.qualquer {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.8)
+  );
+  color: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: opacity 0.2s ease-in-out;
+  padding-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+  width: 90%;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech li {
+  display: inline-block;
+  background-color: rgb(126, 123, 123);
+  color: #fff;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.qualquer li:not(:last-child) {
+  margin-right: 1rem;
+}
+.item .qualquer {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.desc {
+  color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .itens {
+    display: flex;
+    flex-direction: column;
+  }
+  .item {
+    margin: auto;
+    margin-bottom: 1.2rem;
+    width: 95%;
+  }
+}

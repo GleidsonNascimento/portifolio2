@@ -1,0 +1,34 @@
+.about {
+  display: flex;
+  width: 87%;
+  margin: auto;
+  background-color: rgb(5, 5, 5);
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: auto;
+  text-align: center;
+  border: 1px 1px 1px rgb(255, 124, 124);
+  color: white;
+  font-family: "'PetitLatin', sans-serif";
+}
+.about-text h1 {
+  color: white;
+}
+.about-text p {
+  margin-top: 1.2rem;
+  text-align: justify;
+}
+.banner-about {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.banner-about img {
+  width: 100%;
+  border-radius: 30px;
+}

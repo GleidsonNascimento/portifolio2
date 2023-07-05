@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 1%;
+}
+.navbar p,
+a {
+  margin: 2%;
+  font-size: 22px;
+  color: rgb(253, 251, 251);
+  cursor: pointer;
+  transition: color 0.6s ease;
+}
+
+.navbar p:hover {
+  color: rgb(161, 25, 25);
+}

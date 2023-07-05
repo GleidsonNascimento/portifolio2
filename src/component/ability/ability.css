@@ -1,0 +1,19 @@
+.ability-img {
+  display: flex;
+  justify-content: center;
+}
+
+.ability-img img {
+  width: 5rem;
+}
+.ability-con {
+  width: 90%;
+  margin: auto;
+  margin-top: 2.6rem;
+  margin-bottom: 2.6rem;
+}
+.ability-con h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
