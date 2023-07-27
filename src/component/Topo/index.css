@@ -2,17 +2,25 @@
   display: flex;
   text-align: center;
   justify-content: center;
-  padding-top: 1%;
+  width: 60%;
+  margin: auto;
+  border-bottom: 2px solid white;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 2rem;
 }
 .navbar p,
 a {
   margin: 2%;
-  font-size: 22px;
+  font-size: 26px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: rgb(253, 251, 251);
   cursor: pointer;
   transition: color 0.6s ease;
 }
 
-.navbar p:hover {
-  color: rgb(161, 25, 25);
+.navbar a:hover {
+  color: rgb(212, 25, 25);
+  text-decoration: underline;
 }

@@ -2,8 +2,15 @@
   display: flex;
   width: 87%;
   margin: auto;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(5, 5, 5);
+  padding-top: 2rem;
   margin-bottom: 1.5rem;
+}
+.social-link img {
+  width: 40px;
+  height: 40px;
 }
 
 .about-text {
@@ -16,12 +23,26 @@
   color: white;
   font-family: "'PetitLatin', sans-serif";
 }
-.about-text h1 {
+.about-text h2 {
   color: white;
+  font-size: 28px;
 }
 .about-text p {
   margin-top: 1.2rem;
+  font-size: 20px;
   text-align: justify;
+}
+
+.about-text img:hover {
+  transform: translateY(-5px);
+}
+.about-text img {
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  color: #0663fa;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 .banner-about {
   margin-left: 20px;
@@ -31,4 +52,15 @@
 .banner-about img {
   width: 100%;
   border-radius: 30px;
+}
+@media only screen and (max-width: 800px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-about img {
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+  }
 }

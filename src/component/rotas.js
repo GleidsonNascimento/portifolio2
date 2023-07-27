@@ -4,7 +4,7 @@ import { PortifolioContext, Provider } from "./contextProjet.js/contextProject";
 import Home from "./home/home";
 import Project from "./project/project";
 import Ability from "./ability/ability";
-import Projects from "./Campos";
+import Projects from "./projects";
 
 export default function Rotas() {
   return (

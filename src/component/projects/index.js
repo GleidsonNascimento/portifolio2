@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
 import { Button, Modal } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
 import "./campo.css";
 import Project from "../project/project";
 import NavBar from "../Topo";
@@ -23,7 +22,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="container">
+    <div className="background container-max">
       <NavBar />
       <div className="itens">
         {AllProject.map((projeto) => (
@@ -37,22 +36,27 @@ export default function Projects() {
               backgroundSize: "cover",
             }}
           >
-            <div className="qualquer">
+            <div className="box-project">
               <Link to="#" onClick={() => handleOpenModal(projeto.id)}>
-                <h2 className="textos-animados">{projeto.name}</h2>
+                <h2>{projeto.name}</h2>
                 <ul className="tech">
-                  {projeto.Technologies.map((tech, index) => (
+                  {projeto.Technologies.slice(0, 4).map((tech, index) => (
                     <li key={index}>{tech}</li>
                   ))}
                 </ul>
-                <p className="textos-animados desc">{projeto.description}</p>
+                <p className="desc">{projeto.description}</p>
               </Link>
             </div>
           </div>
         ))}
       </div>
       <Modal className="modal" open={openModal} onClose={handleCloseModal}>
-        {selectedProjectId && <Project projectId={selectedProjectId} />}
+        {selectedProjectId && (
+          <Project
+            projectId={selectedProjectId}
+            onCloseModal={handleCloseModal}
+          />
+        )}
       </Modal>
     </div>
   );

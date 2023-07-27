@@ -7,6 +7,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: 80%;
+  margin: auto;
 }
 
 img {
@@ -15,23 +17,22 @@ img {
 
 .item {
   margin-bottom: 30px;
-  width: 48%;
-  padding: 10px;
+  width: 45%;
   box-sizing: border-box;
-  height: 420px;
+  height: 20rem;
   overflow: hidden;
   position: relative;
   border-radius: 0.6rem;
   border: solid 1px;
 }
 
-.item:hover .qualquer {
+.item:hover .box-project {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.5s ease-in-out;
 }
 
-.qualquer {
+.box-project {
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.3),
@@ -48,7 +49,7 @@ img {
   justify-content: center;
   align-items: flex-end;
   transition: opacity 0.2s ease-in-out;
-  padding-bottom: 25px;
+  padding-bottom: 0.4rem;
 }
 
 a {
@@ -63,19 +64,20 @@ a {
 
 .tech li {
   display: inline-block;
-  background-color: rgb(126, 123, 123);
+  background-color: rgb(112, 110, 110);
   color: #fff;
   border-radius: 0.6rem;
   padding: 0.5rem;
   margin-right: 5px;
   margin-bottom: 5px;
   text-transform: capitalize;
+  font-size: 15px;
 }
 
-.qualquer li:not(:last-child) {
+.box-project li:not(:last-child) {
   margin-right: 1rem;
 }
-.item .qualquer {
+.item .box-project {
   opacity: 0;
   transform: translateY(100%);
   transition: all 0.3s ease-in-out;
@@ -89,6 +91,8 @@ h2 {
 
 .desc {
   color: white;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media only screen and (max-width: 1000px) {
   .itens {
@@ -98,6 +102,6 @@ h2 {
   .item {
     margin: auto;
     margin-bottom: 1.2rem;
-    width: 95%;
+    width: 100%;
   }
 }
