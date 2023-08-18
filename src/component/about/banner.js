@@ -37,9 +37,9 @@ export default function About() {
           <p>
             Trabalhei como freelancer por 4 anos na área de design gráfico, me
             sentindo infeliz procurei outra área que pudesse trabalhar e me
-            sentir realizado, quando me apaixonei e agora sigo firme aprendendo
-            todo dia enquanto me divirto escrevendo código e procurando
-            soluções.
+            sentir realizado, quando me apaixonei pela area e agora sigo firme
+            aprendendo todo dia enquanto me divirto escrevendo código e
+            procurando soluções.
           </p>
           <div className="social-link">
             <a

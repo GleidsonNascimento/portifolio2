@@ -6,6 +6,7 @@ import gelateria from "../../imagens/gelateria-img.png";
 import detetive from "../../imagens/detetive-img.png";
 import detetiveGif from "../../imagens/detetive.gif";
 import investing from "../../imagens/investing-img.png";
+import personagens from "../../imagens/personagens.png";
 
 export const PortifolioContext = createContext();
 
@@ -72,6 +73,18 @@ export const Provider = ({ children }) => {
         "Simulador de investimento inspirado no simulador da nubank, com opção de calcular investimento na taxa selic ",
       image: investing,
       Link: "",
+    },
+    {
+      id: 5,
+      name: "curiosidade personagens",
+      Technologies: ["HTML", "CSS", "React"],
+      description: "Projeto de curiosidade de personagens e animes",
+      repository:
+        "https://github.com/GleidsonNascimento/Personagens-curiosidade",
+      about:
+        "O projeto tem como intuito apenas apresentar alguns personagens, informações sobre eles e animes, personagens que eu gosto ou acho legal, pretendo atualizar, talvez criar mais funções no futuro, mas por enquanto é isso, apenas um projeto simples",
+      image: personagens,
+      Link: "https://curiosidade-de-personagem.netlify.app/",
     },
   ];
   const contextValue = { AllProject };
