@@ -3,6 +3,8 @@ import programador from "../../imagens/programador.jpg";
 import github2 from "../../imagens/github2.png";
 import linkdin from "../../imagens/Linkidin.png";
 import twitter from "../../imagens/twitter.png";
+import printer from "../../imagens/printer.png";
+import curriculo from "../../imagens/curriculo.pdf";
 import "boxicons";
 import Typed from "typed.js";
 import "./about.css";
@@ -65,6 +67,9 @@ export default function About() {
               rel="noopener noreferrer"
             >
               <img src={github2} alt="" srcset="" />
+            </a>
+            <a href={curriculo} target="_blank" rel="noopener noreferrer">
+              <img src={printer} />
             </a>
           </div>
         </div>
