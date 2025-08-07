@@ -1,36 +1,119 @@
 .about {
   display: flex;
-  width: 87%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(5, 5, 5);
-  padding-top: 2rem;
-  margin-bottom: 1.5rem;
+  position: fixed;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 1vmax;
+  background-image: url("../../imagens/prog-art.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
 }
+.dark .about {
+  background-image: url("../../imagens/prog-art-back.jpg");
+  transition: 0.3s ease-in-out;
+}
+
+.card {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: fixed;
+  top: 0.4rem;
+  right: 19rem;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+  animation: breathe 4s ease-in-out infinite;
+  will-change: transform;
+}
+.apresentation-name {
+  opacity: 100;
+  right: 2.5rem;
+  z-index: 99999;
+  color: rgb(238, 223, 223);
+  text-align: center;
+  justify-content: center;
+}
+.apresentation-name h1 {
+  margin-top: -1rem;
+  color: #3b82f6;
+  font-family: "poppins", sans-serif;
+  font-size: 32px;
+}
+.card--spin {
+  animation: none;
+}
+
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+}
+
+.about-text--flip-in {
+  transform-origin: center center;
+  animation: flipIn 0.6s ease forwards;
+}
+.about-text-wrapper {
+  position: fixed;
+  top: 5rem;
+  right: 2.5rem;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  background-color: red;
+  border: 1px solid #ff0808;
+}
+
+.about-text {
+  position: fixed;
+  top: 2rem;
+  right: 0.5rem;
+  transform: translate(-50%, -50%);
+  background: #f0f4f8;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 600px;
+  z-index: 1;
+  text-align: center;
+  opacity: 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 .social-link img {
   width: 40px;
   height: 40px;
 }
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin: auto;
-  text-align: center;
-  border: 1px 1px 1px rgb(255, 124, 124);
-  color: white;
-  font-family: "'PetitLatin', sans-serif";
-}
 .about-text h2 {
-  color: white;
+  color: black;
+  font-family: "Manrope";
   font-size: 28px;
 }
 .about-text p {
   margin-top: 1.2rem;
-  font-size: 20px;
+  font-size: 23px;
   text-align: justify;
+  font-family: "poppins", sans-serif;
+  color: #1f2937;
 }
 
 .about-text img:hover {
@@ -52,6 +135,9 @@
 .banner-about img {
   width: 100%;
   border-radius: 30px;
+}
+.about-p {
+  color: black;
 }
 @media only screen and (max-width: 800px) {
   .about {

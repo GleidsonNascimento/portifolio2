@@ -1,36 +1,15 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.itens {
+.project-itens {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  width: 80%;
+  width: 95%;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   margin: auto;
 }
 
 img {
   width: 100%;
-}
-
-.item {
-  margin-bottom: 30px;
-  margin-left: 1.6rem;
-  width: 45%;
-  box-sizing: border-box;
-  height: 20rem;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0.6rem;
-  border: solid 1px;
-}
-
-.item:hover .box-project {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s ease-in-out;
 }
 
 .box-project {
@@ -89,14 +68,66 @@ h2 {
   margin-bottom: 0.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.project-item {
+  margin-bottom: 5rem;
+  margin-left: 1.6rem;
+  width: 45%;
+  box-sizing: border-box;
+  height: 27rem;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.301);
+  border-radius: 1.5rem;
+  border: solid 1px;
+}
+.item:hover .box-project {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.project-item:hover .box-project {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+}
 
 .desc {
   color: white;
   font-size: 17px;
   font-family: Arial, Helvetica, sans-serif;
 }
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120%;
+}
+h1 img {
+  width: 4rem;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.project-container h1 {
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-size: 4.5rem;
+  font-family: "League Spartan";
+  font-weight: 400;
+  padding-top: 7.6rem;
+
+  font-style: normal;
+}
+
 @media only screen and (max-width: 1000px) {
-  .itens {
+  .project-itens {
     display: flex;
     flex-direction: column;
   }

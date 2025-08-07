@@ -1,82 +1,90 @@
-import React, { useEffect, useRef } from "react";
-import programador from "../../imagens/programador.jpg";
-import github2 from "../../imagens/github2.png";
-import linkdin from "../../imagens/Linkidin.png";
-import twitter from "../../imagens/twitter.png";
+import React, { useEffect, useRef, useState } from "react";
+import github2 from "../../imagens/github-moon.png";
+import linkdin from "../../imagens/linkedin-sun.png";
+import twitter from "../../imagens/x-moon.png";
 import printer from "../../imagens/printer.png";
-import curriculo from "../../imagens/curriculo.pdf";
-import "boxicons";
+import curriculo from "../../imagens/currículo.pdf";
+
 import Typed from "typed.js";
 import "./about.css";
+import Ability from "../ability/mainContent";
+import AnimatedBanner from "./sky";
 
-export default function About() {
-  const typedRef = useRef(null);
+export default function About({ id, showAbout, setShowAbout }) {
+  const spanRef = useRef(null);
+  const typedInstance = useRef(null);
+
+  const handleToggleAbout = () => {
+    if (showAbout && typedInstance.current) {
+      typedInstance.current.destroy();
+      typedInstance.current = null;
+      if (spanRef.current) spanRef.current.innerHTML = "";
+    }
+    setShowAbout(!showAbout);
+  };
 
   useEffect(() => {
-    const options = {
-      strings: ["DESENVOLVEDOR FRONT-END"],
-      typeSpeed: 50,
-      loop: false,
-      loopCount: Infinity,
-    };
-
-    typedRef.current = new Typed("#typed-text", options);
-
+    if (showAbout && spanRef.current) {
+      typedInstance.current = new Typed(spanRef.current, {
+        strings: ["DESENVOLVEDOR FRONT‑END"],
+        typeSpeed: 50,
+        loop: false,
+      });
+    }
     return () => {
-      typedRef.current.destroy();
+      typedInstance.current?.destroy();
+      typedInstance.current = null;
     };
-  }, []);
+  }, [showAbout]);
 
   return (
-    <div>
-      <div className="about">
-        <div className="about-text">
-          <h2>OLÁ, SOU GLEIDSON</h2>
-          <h2>
-            <span id="typed-text"></span>
-          </h2>
+    <div className="about">
+      <div className="about-image"></div>
 
-          <p>
-            Trabalhei como freelancer por 4 anos na área de design gráfico, me
-            sentindo infeliz procurei outra área que pudesse trabalhar e me
-            sentir realizado, quando me apaixonei pela area e agora sigo firme
-            aprendendo todo dia enquanto me divirto escrevendo código e
-            procurando soluções.
-          </p>
-          <div className="social-link">
-            <a
-              href="https://www.linkedin.com/in/gleidson-guimar%C3%A3es-b927b2254/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <img src={linkdin} alt="" srcset="" />
-            </a>
+      {showAbout && (
+        <div className="about-text-wrapper">
+          <div className="about-text about-text--flip-in">
+            <div>
+              <div className="apresentation-name">
+                <h1>Olá, sou Gleidson</h1>
 
-            <a
-              href="https://twitter.com/AlguemGleidson"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={twitter} alt="" srcset="" />
-            </a>
-
-            <a
-              href="https://github.com/GleidsonNascimento?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={github2} alt="" srcset="" />
-            </a>
-            <a href={curriculo} target="_blank" rel="noopener noreferrer">
-              <img src={printer} />
-            </a>
+                <h2>
+                  <span ref={spanRef}></span>
+                </h2>
+                <p>
+                  Formado em Design Gráfico, trabalhei por alguns anos na área,
+                  mas não consegui me sentir realizado. Por isso, estou em
+                  transição de carreira, buscando me aperfeiçoar e encontrar meu
+                  espaço na área de TI, com foco em front-end.
+                </p>
+              </div>
+              <div className="social-media">
+                <a
+                  download="curriculo.pdf"
+                  href={curriculo}
+                  className="download"
+                >
+                  <img src={printer} alt="" />
+                </a>
+                <a
+                  href="https://x.com/AlguemGleidson"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={twitter} alt="" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/gleidson-guimar%C3%A3es-b927b2254/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={linkdin} alt="" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="banner-about">
-          <img src={programador} alt="" />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

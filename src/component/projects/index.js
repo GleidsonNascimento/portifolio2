@@ -23,7 +23,6 @@ export default function Projects() {
 
   return (
     <div className="background container-max">
-      <NavBar />
       <div className="itens">
         {AllProject.map((projeto) => (
           <div

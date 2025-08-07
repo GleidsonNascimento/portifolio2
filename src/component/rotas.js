@@ -1,23 +1,28 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PortifolioContext, Provider } from "./contextProjet.js/contextProject";
+import { Provider as ProjectProvider } from "./contextProjet.js/contextProject";
+import { ThemeProvider } from "./contextProjet.js/contextTheme";
 import Home from "./home/home";
 import Project from "./project/project";
-import Ability from "./ability/ability";
 import Projects from "./projects";
+import MainPage from "./ability/mainContent";
+import Abilitys from "./ability/habilidades";
 
 export default function Rotas() {
   return (
     <div>
       <BrowserRouter>
-        <Provider>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/project/:id" element={<Project />} />
-            <Route path="/ability" element={<Ability />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
-        </Provider>
+        <ThemeProvider>
+          <ProjectProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/project/:id" element={<Project />} />
+              <Route path="/content" element={<MainPage />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/abilitys" element={<Abilitys />} />
+            </Routes>
+          </ProjectProvider>
+        </ThemeProvider>
       </BrowserRouter>
     </div>
   );

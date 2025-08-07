@@ -6,7 +6,8 @@ img {
 }
 .proj {
   background-color: white;
-  position: right;
+  position: relative;
+  z-index: 9999;
   width: 44%;
   height: 100vh;
   display: flex;
@@ -104,7 +105,7 @@ ul {
 }
 
 .open a {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 18px;
   display: flex;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -136,7 +137,7 @@ ul {
 h3 a {
   color: black;
   font-size: 15px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Arial Narrow Bold", sans-serif;
   font-weight: bold;
   margin-bottom: 0.4rem;
 }

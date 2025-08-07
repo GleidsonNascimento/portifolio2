@@ -2,6 +2,6 @@
   margin: 0px;
   padding: 0px;
 }
-
-.App {
+#projects-section {
+  min-height: 1300px;
 }
