@@ -72,7 +72,11 @@ export default function Email({ id }) {
             onChange={handleChange}
             required
           />
-          <button type="submit" disabled={status === "sending"}>
+          <button
+            className="button-email"
+            type="submit"
+            disabled={status === "sending"}
+          >
             {status === "sending" ? "Enviando..." : "Enviar"}
           </button>
 

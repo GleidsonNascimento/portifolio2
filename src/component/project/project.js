@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
-import linkexterno from "../../imagens/link.png";
-import github from "../../imagens/github-moon.png";
-import { useParams } from "react-router-dom";
+import github from "../../imagens/github-sun.png";
+
 import { Close } from "@material-ui/icons";
 import "./project.css";
 
@@ -26,7 +25,7 @@ export default function Project({ projectId, onCloseModal }) {
         <img src={projeto.image} alt="" />
         <h2 className="about-pr">Sobre</h2>
         <p className="descr">{projeto.about}</p>
-        <h2 className="about-pr"> Technologies</h2>
+        <h2 className="about-pr"> Tecnologias</h2>
         <animatedBanner />
         <ul>
           {projeto.Technologies.map((tech, index) => (

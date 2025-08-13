@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "../Topo";
 import programador from "../../imagens/programador.jpg";
 

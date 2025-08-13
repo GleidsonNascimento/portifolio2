@@ -5,33 +5,44 @@ import javascript from "../../imagens/javascript.png";
 import css from "../../imagens/css3.png";
 import html from "../../imagens/html5.png";
 import tailwind from "../../imagens/tailwind.png";
-import AnimatedBanner from "../about/sky";
+import firebase from "../../imagens/firebase.png";
 import git from "../../imagens/git.png";
 import hability from "../../imagens/ability.png";
+import mysql from "../../imagens/mysql-database.png";
+import Staration from "./staration";
 
 export default function Abilitys({ id }) {
   const icons = [
-    { id: "react", src: react, label: "React" },
-    { id: "typescript", src: typescript, label: "TypeScript" },
-    { id: "javascript", src: javascript, label: "JavaScript" },
-    { id: "css", src: css, label: "CSS3" },
-    { id: "html", src: html, label: "HTML5" },
-    { id: "tailwind", src: tailwind, label: "Tailwind" },
-    { id: "git", src: git, label: "Git" },
+    { id: "html", src: html, label: "HTML5", level: 3 },
+    { id: "css", src: css, label: "CSS3", level: 3 },
+    { id: "javascript", src: javascript, label: "JavaScript", level: 2 },
+    { id: "git", src: git, label: "Git", level: 3 },
+    { id: "react", src: react, label: "React", level: 3 },
+    { id: "typescript", src: typescript, label: "TypeScript", level: 2 },
+    { id: "tailwind", src: tailwind, label: "Tailwind", level: 2 },
+    { id: "firebase", src: firebase, label: "Firebase", level: 2 },
+    { id: "mysql", src: mysql, label: "MySQL", level: 1 },
   ];
 
   const technologyDescriptions = {
+    html: "  Comecei aprendendo sobre HTML, que é uma linguagem de marcação. Eu me confundia muito, me iludindo que era uma linguagem de programação. Quando descobri que era apenas uma linguagem de marcação, fiquei levemente decepcionado, mas acabei entendendo seu valor e o quanto é importante para estruturar e organizar o projeto. Ainda preciso melhorar muito, mas estou me dedicando a isso.",
     react:
-      "Há 9 meses, iniciei meus estudos em React, o framework JavaScript para construção de interfaces de usuário. Durante esse período, tenho me dedicado a aprender seus conceitos e a utilizar suas bibliotecas para criar aplicações web interativas. Estou confiante em minha habilidade de desenvolver componentes reutilizáveis e responsivos. Pretendo continuar aprimorando minhas habilidades e enfrentando novos desafios nessa área de programação.",
+      "React foi a primeira biblioteca que aprendi, e me apaixonei por ela. Para um júnior sem noção de como fazer um código limpo e um projeto escalavel, ela me ajudou a me organizar e estruturar melhor o que estava fazendo, estou me dedicando a aprender mais sobre isso. Me considero decente no React atualmente.",
     typescript:
-      "Eu comecei a aprender TypeScript há alguns meses. TypeScript é uma linguagem de programação que funciona junto com o JavaScript e me ajuda a escrever código mais organizado e seguro. Eu estou gostando de aprender os conceitos e as vantagens que o TypeScript tem para fazer aplicativos. Eu estou conseguindo escrever código mais fácil de entender e de corrigir. Meu objetivo é continuar melhorando minhas habilidades em TypeScript, usando seus benefícios para fazer código de qualidade e fácil de manter.",
+      "Para quem começou, brincar com o TypeScript e fazer projetos nele foi simplesmente maravilhoso. É uma linguagem que me ajudou muito a entender melhor o que estou fazendo. O fato de ser mais fácil reconhecer um erro ou bug ajuda demais, tornando tudo mais tranquilo no aprendizado. Ainda é complicado perceber as diferenças entre o JavaScript e o TypeScript, mas estou me dedicando para que isso se torne natural para mim. Me considero mediano no TypeScript atualmente.",
     javascript:
-      "Desde o ano passado, eu tenho me dedicado a aprender e a usar o JavaScript. Essa é uma linguagem de programação muito poderosa e flexivel, que me permite fazer muitas coisas legais na internet. Eu aprendi a criar sites e aplicativos que são interativos e dinâmicos, usando os recursos e as estruturas do JavaScript. Eu também conheci algumas ferramentas famosas, como o React, que me ajudaram a melhorar minhas habilidades e a seguir as melhores práticas de desenvolvimento. Eu estou muito feliz com o que eu consegui fazer até agora e quero continuar aprendendo e me desafiando no mundo da programação.",
-    css: "Desde 17 meses atrás quando comecei aprender junto com HTML foi uma das partes que mais me encantou, como ex design achei divertido vê o CSS tomando forma e cores com o CSS",
-    html: "Comecei aprender 17 meses atrás comecei aprender HTML na prática básica da escrita de código, tenho muito a melhora, mas tenho foco para melhora a forma que estruturo as minhas linhas de código",
+      "Já faz um tempo que estou aprendendo JavaScript, e tem sido divertido e desafiador ao mesmo tempo. Parece uma linguagem sem fim: toda vez que tento fazer algo, descubro algo novo. É uma linguagem que me fascina. Me considero decente nela atualmente, mesmo ainda tendo muito o que aprender e sempre parecendo que continuo sem entender o tamanho do mundo que é, mas estou me dedicando para deixar de ser menos ignorante nela e me tornar um ótimo desenvolvedor.",
+
+    css: "Claro que junto com HTML, comecei a aprender CSS, confesso que no começo foi um pouco dificil (ainda é) aprender a lidar com todas as opções que o CSS pode me oferecer, mas ao mesmo tempo foi a parte mais divertida, é muito empolgante ver as coisas se transformando e ganhando vida, cores, formas e animação, é uma parte que eu gosto muito, ainda tenho muito o que aprender, mas estou me dedicando a isso, mas já sei fazer bastante coisa, me considero mediano.",
+
     tailwind:
-      "Tenho aprendido a ferramenta pra facilitar meu uso do CSS e agilidade nas minhas necessidades",
-    git: "Tenho aprendido como utilizar o git tem pouco mais de um ano, tenho confiança em usar no uso diario do trabalho para fazer as atualizações e modificações no repositorios",
+      "Estou me acostumando a usar o Tailwind nos meus códigos para evitar criar CSS desnecessário. No geral, usá-lo não é difícil, mas é complicado entender os momentos certos de aplicar. Estou aprendendo e me considero bom no Tailwind atualmente.",
+
+    git: "Sei o bom básico do Git: criar repositórios, clonar, fazer commit, push, pull, criar branches e fazer merge. Sei usar o GitHub e o GitLab, mas ainda preciso de mais experiências reais para me sentir mais confortável. Experiências reais são sempre melhores que as de estudo, principalmente quando se trata de Git. Me considero competente para um júnior.",
+    firebase:
+      "Eu aprendi a usar firebase mais recentemente, aprendi a usar autenticação e banco de dados, fiz dois projetos com o banco de dado, achei um banco muito interessante,bem simples de usar, mais simples que o MYSQL por exemplo, mas ainda tenho muito que aprender pra ter certezas do que estou falando.",
+    mysql:
+      "MYSQL tá sendo um banco de dado relativamente dificil de realmente aprender a mexer, o firebase é bem simples e automatizado o que trás vantagens e desvantagens, enquanto mysql me sinto mais no controle, o que é incrivel, mas também pra aprender é mais dificil, tá sendo uma boa expeririência, mas to longe de ser bom",
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -85,7 +96,10 @@ export default function Abilitys({ id }) {
       </div>
 
       <div className="technology-description">
-        <p className="tech-desc">{technologyDescriptions[currentId]}</p>
+        <p className="tech-desc">
+          <Staration level={icons[currentIndex].level} />
+          {technologyDescriptions[currentId]}
+        </p>
       </div>
     </div>
   );

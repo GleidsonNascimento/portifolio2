@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
-import { Button, Modal } from "@material-ui/core";
+import { Modal } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import "./campo.css";
 import Project from "../project/project";
-import NavBar from "../Topo";
 
 export default function Projects() {
   const { AllProject } = useContext(PortifolioContext);

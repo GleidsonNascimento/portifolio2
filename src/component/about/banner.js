@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import github2 from "../../imagens/github-moon.png";
+import React, { useEffect, useRef } from "react";
 import linkdin from "../../imagens/linkedin-sun.png";
 import twitter from "../../imagens/x-moon.png";
 import printer from "../../imagens/printer.png";
@@ -7,21 +6,10 @@ import curriculo from "../../imagens/currículo.pdf";
 
 import Typed from "typed.js";
 import "./about.css";
-import Ability from "../ability/mainContent";
-import AnimatedBanner from "./sky";
 
 export default function About({ id, showAbout, setShowAbout }) {
   const spanRef = useRef(null);
   const typedInstance = useRef(null);
-
-  const handleToggleAbout = () => {
-    if (showAbout && typedInstance.current) {
-      typedInstance.current.destroy();
-      typedInstance.current = null;
-      if (spanRef.current) spanRef.current.innerHTML = "";
-    }
-    setShowAbout(!showAbout);
-  };
 
   useEffect(() => {
     if (showAbout && spanRef.current) {

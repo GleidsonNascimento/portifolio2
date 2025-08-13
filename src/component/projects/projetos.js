@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
-import { Button, Modal } from "@material-ui/core";
+import { Modal } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Project from "../project/project";
 import paper from "../../imagens/paper.png";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import gitMoon from "../../imagens/github-moon.png";
 import gitSun from "../../imagens/github-sun.png";
 import linkMoon from "../../imagens/linkedin-moon.png";
@@ -50,48 +50,48 @@ export default function NavBar({
           className={`navbar-links color-universal ${menuOpen ? "active" : ""}`}
         >
           <p>
-            <a
+            <button
               data-section="home-section"
               onClick={() => scrollToSection("home-section")}
-              className={`nav-link ${
+              className={`nav-link button-link ${
                 activeSection === "home-section" ? "active" : ""
               }`}
             >
               Home
-            </a>
+            </button>
           </p>
           <p>
-            <a
+            <button
               data-section="ability-section"
               onClick={() => scrollToSection("ability-section")}
-              className={`nav-link ${
+              className={`nav-link button-link ${
                 activeSection === "ability-section" ? "active" : ""
               }`}
             >
               Habilidades
-            </a>
+            </button>
           </p>
           <p>
-            <a
+            <button
               data-section="projects-section"
               onClick={() => scrollToSection("projects-section")}
-              className={`nav-link ${
+              className={`nav-link button-link ${
                 activeSection === "projects-section" ? "active" : ""
               }`}
             >
               Projetos
-            </a>
+            </button>
           </p>
           <p>
-            <a
+            <button
               data-section="email-section"
               onClick={() => scrollToSection("email-section")}
-              className={`nav-link ${
+              className={`nav-link button-link ${
                 activeSection === "email-section" ? "active" : ""
               }`}
             >
               Entre em contato
-            </a>
+            </button>
           </p>
         </div>
 

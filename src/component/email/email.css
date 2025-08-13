@@ -51,11 +51,11 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover:not(:disabled) {
+.button-email:hover:not(:disabled) {
   background-color: #303f9f;
 }
 
-button:disabled {
+.button-email:disabled {
   background-color: #999;
   cursor: not-allowed;
 }
