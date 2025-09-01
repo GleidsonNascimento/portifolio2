@@ -1,12 +1,10 @@
 import React, { createContext } from "react";
 import pokedex from "../../imagens/pokedex-img.png";
-import pokedexGif from "../../imagens/pokedex.gif";
-import gelateriaGif from "../../imagens/gelateria.gif";
 import gelateria from "../../imagens/gelateria-img.png";
 import detetive from "../../imagens/detetive-img.png";
-import detetiveGif from "../../imagens/detetive.gif";
 import investing from "../../imagens/investing-img.png";
 import personagens from "../../imagens/personagens.png";
+import adocao from "../../imagens/adoção.png";
 
 export const PortifolioContext = createContext();
 
@@ -14,6 +12,18 @@ export const Provider = ({ children }) => {
   const AllProject = [
     {
       id: 1,
+      name: "Site de adoção",
+      Technologies: ["React js", "Firebase", "React hooks:useState, useeffect"],
+      description:
+        "um site feito com objetivo de doar pra alguma ong, com objetivo de facilitar a divulgar animais pra doação e doa-lós",
+      repository: "https://github.com/GleidsonNascimento/sistema-de-ado-o",
+      about:
+        "um projeto de doação de animal, com objetivo simples de doar animal, feito em react/typescript, usando boa parte do que eu sei e aprendi, com sistema de login com autenticação e banco de dados ligado ao firebase",
+      Link: "https://sistema-de-ado-o.vercel.app/",
+      image: adocao,
+    },
+    {
+      id: 2,
       name: "Pokedex",
       Technologies: [
         "javascript",
@@ -32,7 +42,7 @@ export const Provider = ({ children }) => {
       image: pokedex,
     },
     {
-      id: 2,
+      id: 3,
       name: "Gelateria",
       Technologies: ["javascript", "CSS"],
       description:
@@ -44,7 +54,7 @@ export const Provider = ({ children }) => {
       image: gelateria,
     },
     {
-      id: 3,
+      id: 4,
       name: "Ficha detetive",
       Technologies: ["javascript", "CSS", "React"],
       description:
@@ -56,7 +66,7 @@ export const Provider = ({ children }) => {
       image: detetive,
     },
     {
-      id: 4,
+      id: 5,
       name: "Simulator investing",
       Technologies: [
         "Javascript",
@@ -75,7 +85,7 @@ export const Provider = ({ children }) => {
       Link: "",
     },
     {
-      id: 5,
+      id: 6,
       name: "curiosidade personagens",
       Technologies: ["HTML", "CSS", "React"],
       description: "Projeto de curiosidade de personagens e animes",

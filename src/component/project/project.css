@@ -128,16 +128,41 @@ li {
   font-weight: 500;
 }
 
-.links {
-  margin-top: 2rem;
-}
-
-.links h2 {
+.git-link h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   font-family: "arial", sans-serif;
-
   color: #1a1a1a;
+}
+.box-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.box-link a {
+  font-size: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: blue;
+}
+.box-link img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.open-project {
+  font-size: 0.95rem;
+  padding: 0.65rem 1rem;
+  background-color: rgb(15, 15, 15);
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.open-project a {
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
@@ -148,10 +173,5 @@ li {
 
   .cont-proj {
     padding: 1.5rem;
-  }
-
-  .open {
-    font-size: 0.95rem;
-    padding: 0.65rem 1rem;
   }
 }

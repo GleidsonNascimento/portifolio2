@@ -33,7 +33,7 @@ export default function Project({ projectId, onCloseModal }) {
           ))}
         </ul>
 
-        <div className="links">
+        <div className="git-link">
           <h2>Github</h2>
           <div className="box-link">
             <img src={github} alt="Github Icon" />
@@ -46,12 +46,10 @@ export default function Project({ projectId, onCloseModal }) {
         </div>
       </div>
       <div className="container-open">
-        <div className="open">
-          <h2>
-            <a href={projeto.Link} target="_blank" rel="noreferrer">
-              Open Project
-            </a>
-          </h2>
+        <div className="open-project">
+          <a href={projeto.Link} target="_blank" rel="noreferrer">
+            Abri projeto
+          </a>
         </div>
       </div>
     </div>
