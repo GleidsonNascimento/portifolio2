@@ -96,10 +96,10 @@ export default function Abilitys({ id }) {
       </div>
 
       <div className="technology-description">
-        <p className="tech-desc">
+        <div className="tech-desc">
           <Staration level={icons[currentIndex].level} />
-          {technologyDescriptions[currentId]}
-        </p>
+          <p>{technologyDescriptions[currentId]}</p>
+        </div>
       </div>
     </div>
   );

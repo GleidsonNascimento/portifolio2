@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
-import { Modal } from "@material-ui/core";
+import { Modal } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./campo.css";
 import Project from "../project/project";

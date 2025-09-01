@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
-import { Modal } from "@material-ui/core";
+import { Modal } from "@mui/material";
 import { Link } from "react-router-dom";
 import Project from "../project/project";
 import paper from "../../imagens/paper.png";
@@ -59,12 +59,14 @@ export default function Projetos({ id }) {
           <p>Nenhum projeto encontrado.</p>
         )}
         <Modal className="modal" open={openModal} onClose={handleCloseModal}>
-          {selectedProjectId && (
-            <Project
-              projectId={selectedProjectId}
-              onCloseModal={handleCloseModal}
-            />
-          )}
+          <div>
+            {selectedProjectId ? (
+              <Project
+                projectId={selectedProjectId}
+                onCloseModal={handleCloseModal}
+              />
+            ) : null}
+          </div>
         </Modal>
       </div>
     </div>

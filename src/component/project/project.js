@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PortifolioContext } from "../contextProjet.js/contextProject";
 import github from "../../imagens/github-sun.png";
 
-import { Close } from "@material-ui/icons";
+import CloseIcon from "@mui/icons-material/Close";
 import "./project.css";
 
 export default function Project({ projectId, onCloseModal }) {
@@ -17,7 +17,7 @@ export default function Project({ projectId, onCloseModal }) {
   return (
     <div className={`proj modal-enter`} key={projeto.id}>
       <div className="close-button" onClick={onCloseModal}>
-        <Close />
+        <CloseIcon />
       </div>
       <div className="cont-proj">
         <h1>{projeto.name}</h1>
